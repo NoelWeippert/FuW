@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUW Rimpar – Fortschritt und Wandel | Bürgerbewegung für Rimpar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="Logo_FUW_Klein.png">
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+    </script>
+
+</head>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="bg-white shadow sticky top-0 z-50">
+
+        <nav class="max-w-6xl mx-auto flex items-center justify-between p-4">
+
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showSection('home')">
+                <img src="Logo_FUW_Klein.png" alt="FUW Logo" class="w-10 h-10">
+                <span class="text-xl font-semibold text-[#2f8b84]">FUW Rimpar</span>
+            </div>
+
+            <!-- Desktop Menü -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <button onclick="showSection('home')" class="hover:text-[#2f8b84]">Startseite</button>
+                <button onclick="showSection('partei')" class="hover:text-[#2f8b84]">Unsere Partei</button>
+                <button onclick="showSection('elke')" class="hover:text-[#2f8b84]">Über Elke</button>
+                <button onclick="showSection('impressum')" class="hover:text-[#2f8b84]">Impressum</button>
+                <button onclick="showSection('datenschutz')" class="hover:text-[#2f8b84]">Datenschutz</button>
+            </div>
+
+            <!-- Mobile Menü Button -->
+            <button class="md:hidden text-3xl" onclick="toggleMobileMenu()">☰</button>
+
+        </nav>
+
+        <!-- Mobile Dropdown Menü -->
+        <div id="mobileMenu"
+            class="md:hidden hidden flex-col bg-white shadow text-center py-4 text-lg border-t border-gray-300">
+
+            <button onclick="showSection('home'); toggleMobileMenu()"
+                class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300">Startseite</button>
+
+            <button onclick="showSection('partei'); toggleMobileMenu()"
+                class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300">Unsere Partei</button>
+
+            <button onclick="showSection('elke'); toggleMobileMenu()"
+                class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300">Über Elke</button>
+
+            <button onclick="showSection('impressum'); toggleMobileMenu()"
+                class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300">Impressum</button>
+
+            <button onclick="showSection('datenschutz'); toggleMobileMenu()"
+                class="hover:text-[#2f8b84] py-4 mb-2">Datenschutz</button>
+
+        </div>
+
+    </header>
+
+    <!-- Startseite -->
+    <section id="home" class="flex-grow">
+
+        <div class="text-center py-12 bg-gradient-to-b from-white to-gray-100">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-[#2f8b84]">Nominierungsveranstaltung</h1>
+            <p class="text-lg md:text-xl mt-3 text-gray-700">Bericht von Elke Weippert</p>
+        </div>
+
+        <main class="max-w-3xl mx-auto px-6 py-12">
+
+            <div
+                class="bg-white shadow-lg rounded-2xl p-10 border border-gray-200 text-gray-800 leading-relaxed text-xl">
+
+                <img src="nominierung.jpg" alt="Nominierungsveranstaltung"
+                    class="w-full max-w-full h-auto rounded-xl shadow mb-3">
+
+                <p class="text-center text-sm text-gray-600 mb-8">
+                    <i>Elke Weippert mit Alois Fischer</i>
+                </p>
+
+                <!-- 🔥 NEUER TEXT -->
+                <p class="mb-6 font-semibold">Liebe Mitbürgerinnen und liebe Mitbürger,</p>
+
+                <p class="mb-6">
+                    um heute da zu stehen wo ich jetzt stehe, gab es manche recht schlaflose Nacht, viele Diskussionen
+                    auch innerhalb der Familie. Jetzt steh ich hier und es erfüllt mich auch etwas mit Demut. Denn die
+                    Entscheidung, für das Bürgermeisteramt zu kandidieren, trifft man nicht leichtfertig. Sie ist das
+                    Ergebnis vieler Gespräche, vieler Gedanken und eines tiefen Wunsches: etwas zu bewegen für unsere
+                    Gemeinde.
+                </p>
+
+                <p class="mb-6">
+                    Rimpar ist seit über 45 Jahren meine Heimat, mein Zuhause, auch wenn ich eine Neigschmeckte bin.
+                    Hier bin ich verwurzelt – im Gemeinderat seit fast 30 Jahren, im Vereinsleben bei der DJK und vor
+                    allem im OGV wo ich seit über 10 Jahren Vorsitzende bin, sowie in der Nachbarschaft. Meine drei
+                    Kinder sind hier aufgewachsen und ich bin stolz, dass inzwischen auch mein ältester Enkel seit ein
+                    paar Monaten wieder in Rimpar wohnt und ich so alle meine 4 Enkel um mich habe, was für mich als
+                    Familienmensch das absolute Glück bedeutet.
+                </p>
+
+                <p class="mb-6">
+                    Ich kenne die Menschen, die hier leben. Ich weiß, wo unsere Gemeinde stark ist – und wo sie manchmal
+                    Unterstützung braucht. Und genau deshalb stehe ich heute hier: weil ich überzeugt bin, dass wir
+                    gemeinsam mehr erreichen können. Ich habe mit meinem Team der Freien Wähler ein starkes Team um mich
+                    auf das ich bauen und zählen kann,
+                </p>
+
+                <p class="mb-6">
+                    Ich möchte Bürgermeisterin werden,<br>
+                    weil ich glaube, dass Politik vor Ort nicht über die Köpfe der Menschen hinweg gemacht werden
+                    darf.<br>
+                    – weil Zuhören wichtiger ist als Reden.<br>
+                    – weil ehrliches Miteinander mehr bewirkt als laute Schlagworte.<br>
+                    – weil man in kleinen Schritten auch noch viel bewegen kann.
+                </p>
+
+                <p class="mb-6">
+                    In den letzten Jahren habe ich erlebt, wie sehr Rimpar gewachsen ist – nicht nur an Häusern, sondern
+                    auch an Ideen, an Engagement, an Herz. Aber ich habe auch gesehen, wo wir uns schwertun: bei
+                    bezahlbarem Wohnraum, bei der Verkehrssituation, bei der Unterstützung unserer Vereine und Familien.
+                    Ich will über diese Themen nicht nur sprechen – ich will anpacken.
+                </p>
+
+                <p class="mb-6">
+                    Mir ist wichtig, dass unsere Gemeinde lebenswert für alle Generationen bleibt –<br>
+                    für junge Familien, die hier Wurzeln schlagen wollen,<br>
+                    für unsere Kinder, die sichere Wege zur Schule brauchen,<br>
+                    für unsere Älteren, die mitten im Leben stehen und nicht am Rand stehen wollen und sollen.
+                </p>
+
+                <p class="mb-6">
+                    Ich bringe Erfahrung mit – aus meinen Ausbildungen zum Kaufmann und zur exam. Altenpflegerin mit
+                    Weiterbildungen bis zur Heimleitung. Ich bringe Erfahrungen mit aus diversen Ehrenämtern, u.a. auch
+                    als jahrelange Vereinsvorsitzende, ganz einfach aus dem täglichen Kontakt mit Menschen. Aber vor
+                    allem bringe ich etwas mit, das man nicht lernen kann: Empathie und Herzblut für Rimpar.
+                </p>
+
+                <p class="mb-6">
+                    Ich will Bürgermeisterin sein, die offen ist, ehrlich und bürgernah. Eine, die zuhört, entscheidet –
+                    und dann auch die Verantwortung übernimmt. Eine, die Brücken baut statt Gräben zu ziehen. Eine Frau
+                    hat oftmals andere Denkansätze wie Männer, gezielte Vorgehensweisen und anders strukturierte
+                    Arbeitsweisen. Lassen Sie es mich beweisen, dass
+                    <span style="color: red;">Fortschritt und Wandel</span> in Rimpar möglich sind!
+                </p>
+
+                <p class="mb-6">
+                    Der erste Schritt auf diesem Weg ist mit meiner Nominierung geschafft. Unter Beisein vom
+                    Kreisvorsitzenden der Freien Wähler, Herrn Alois Fischer und Klara Schömig, der ehemaligen
+                    Bürgermeisterin von Güntersleben wurde mir einstimmig das Vertrauen ausgesprochen. Ich danke allen
+                    für euren Glauben daran, dass Veränderungen möglich sind und dass wir es mit dieser Mannschaft
+                    schaffen <span style="color: red;">Fortschritt und Wandel</span> nach Rimpar zu bringen. Lasst uns
+                    gemeinsam zeigen, dass Politik
+                    auch menschlich, herzlich und mutig sein kann.
+                </p>
+
+                <p class="mb-6">Packen wir es gemeinsam an!</p>
+
+                <p class="mb-6">
+                    Wir haben noch ein paar Listenplätze für die Gemeinderatswahl frei. Sie passen in unser Team? Dann
+                    melden Sie sich gerne bei uns!
+                </p>
+
+            </div>
+        </main>
+    </section>
+
+    <!-- Unsere Partei -->
+    <section id="partei" class="hidden flex-grow">
+
+        <div class="text-center py-12 bg-gradient-to-b from-white to-gray-100">
+            <h2 class="text-4xl font-bold text-[#2f8b84]">Unsere Partei</h2>
+            <p class="text-lg text-gray-700 mt-2">FUW Rimpar – Fortschritt und Wandel</p>
+        </div>
+
+        <main class="max-w-3xl mx-auto px-6 py-12">
+
+            <div class="bg-white shadow-lg rounded-2xl p-10 border border-gray-200 leading-relaxed text-xl">
+
+                <p class="mb-6">
+                    Die <strong>FUW Rimpar – Fortschritt und Wandel</strong> ist eine neue Bürgerbewegung, die sich für
+                    eine moderne, transparente und zukunftsorientierte Gemeindepolitik einsetzt.
+                </p>
+
+                <p class="mb-6">
+                    Unser Ziel ist es, die Bürger aktiv in Entscheidungen einzubeziehen und politische Prozesse
+                    nachvollziehbarer zu machen.
+                </p>
+
+                <h2 class="text-2xl font-bold text-[#2f8b84] mb-4">Unsere Schwerpunkte:</h2>
+
+                <ul class="list-disc ml-6 mb-6 space-y-2">
+                    <li>Transparenz in allen Entscheidungen</li>
+                    <li>Mehr Öffentlichkeitsarbeit</li>
+                    <li>Schnellere Umsetzung von Beschlüssen</li>
+                    <li>Volle Ausschöpfung von Fördermitteln</li>
+                    <li>Stärkung von Familien, Senioren & Jugendlichen</li>
+                    <li>Wiederbelebung des Jugendzentrums</li>
+                </ul>
+
+                <p class="text-center font-semibold">
+                    Gemeinsam für eine lebendige, offene und zukunftsfähige Gemeinde!
+                </p>
+
+            </div>
+
+        </main>
+    </section>
+
+    <!-- Über Elke -->
+    <section id="elke" class="hidden flex-grow">
+
+        <div class="text-center py-12 bg-gradient-to-b from-white to-gray-100">
+            <h2 class="text-4xl font-bold text-[#2f8b84]">Über Elke Weippert</h2>
+            <p class="text-lg text-gray-700 mt-2">Bürgermeisterkandidatin der FUW Rimpar</p>
+        </div>
+
+        <main class="max-w-3xl mx-auto px-6 py-12">
+
+            <div class="bg-white shadow-lg rounded-2xl p-8 border border-gray-200 text-gray-800 text-center">
+
+                <img src="IMG_0911.jpg" alt="Elke Weippert"
+                    class="w-56 h-56 rounded-full mx-auto object-cover shadow-md mb-6">
+
+                <p class="text-xl mb-6">
+                    Elke Weippert engagiert sich seit vielen Jahren für unsere Gemeinde. Als Kommunalpolitikerin und
+                    aktive Bürgerin bringt sie Erfahrung und Herzblut mit.
+                </p>
+
+            </div>
+        </main>
+
+    </section>
+
+    <!-- Impressum -->
+    <section id="impressum" class="hidden flex-grow">
+        <div class="text-center py-12">
+            <h2 class="text-3xl font-bold text-[#2f8b84]">Impressum</h2>
+        </div>
+        <main class="max-w-4xl mx-auto px-4 py-10 text-gray-700">
+            <p><strong>FUW Rimpar – Fortschritt und Wandel</strong></p>
+            <p>Von-Stauffenberg-Straße 53a, 97222 Rimpar</p>
+            <p><strong>Vertreten durch:</strong> Elke Weippert</p>
+            <p><strong>Kontakt:</strong> Telefon: 0170 4440949 • E-Mail: info@fuw-rimpar.de</p>
+        </main>
+    </section>
+
+    <!-- Datenschutz -->
+    <section id="datenschutz" class="hidden flex-grow">
+        <div class="text-center py-12">
+            <h2 class="text-3xl font-bold text-[#2f8b84]">Datenschutzerklärung</h2>
+        </div>
+        <main class="max-w-4xl mx-auto px-4 py-10 text-gray-700 space-y-4">
+            <p><strong>1. Verantwortlich:</strong> FUW Rimpar – Fortschritt und Wandel</p>
+            <p><strong>2. Daten:</strong> Es werden nur technisch notwendige Daten gespeichert.</p>
+            <p><strong>3. Kontaktaufnahme:</strong> E-Mails werden zur Bearbeitung gespeichert.</p>
+        </main>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2f8b84] text-white text-sm mt-10">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <p class="font-semibold">FUW Rimpar – Fortschritt und Wandel</p>
+            <p>Von-Stauffenberg-Straße 53a, 97222 Rimpar</p>
+            <p>Telefon: 0170 4440949 • E-Mail: info@fuw-rimpar.de</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FUW Rimpar – Fortschritt und Wandel | Bürgerbewegung für Rimpar</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="https://fuw-rimpar.de/img/Logo_FUW_Klein.png">
-    <link rel="apple-touch-icon" href="https://fuw-rimpar.de/img/Logo_FUW_Klein.png">
+    <link rel="icon" type="image/png" href="img/Logo_FUW_Klein.png">
+    <link rel="apple-touch-icon" href="img/Logo_FUW_Klein.png">
 
-
+    <!-- NAVIGATION -->
     <script>
         function showSection(id) {
             document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
@@ -22,71 +22,15 @@
         }
     </script>
 
-</head>
+    <!-- BERICHTE SYSTEM -->
+    <script>
 
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen overflow-x-hidden">
+        /* -----------------------------
+           BERICHT FUNKTIONEN
+        ----------------------------- */
 
-    <!-- Header -->
-    <header class="bg-white shadow sticky top-0 z-50">
-
-        <nav class="max-w-6xl mx-auto flex items-center justify-between p-4">
-
-            <!-- Logo -->
-            <div class="flex items-center space-x-3 cursor-pointer" onclick="showSection('home')">
-                <img src="img/Logo_FUW_Klein.png" alt="FUW Logo" class="w-10 h-10">
-                <span class="text-xl font-semibold text-[#2f8b84]">FUW Rimpar</span>
-            </div>
-
-            <!-- Desktop Menü -->
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <button onclick="showSection('home')" class="hover:text-[#2f8b84]">Startseite</button>
-                <button onclick="showSection('partei')" class="hover:text-[#2f8b84]">Unsere Partei</button>
-                <button onclick="showSection('elke')" class="hover:text-[#2f8b84]">Über Elke</button>
-                <button onclick="showSection('impressum')" class="hover:text-[#2f8b84]">Impressum</button>
-                <button onclick="showSection('datenschutz')" class="hover:text-[#2f8b84]">Datenschutz</button>
-            </div>
-
-            <!-- Mobile Menü Button -->
-            <button class="md:hidden text-3xl" onclick="toggleMobileMenu()">☰</button>
-
-        </nav>
-
-        <!-- Mobile Dropdown Menü -->
-        <div id="mobileMenu"
-            class="md:hidden hidden flex-col bg-white shadow text-center py-4 text-lg border-t border-gray-300">
-
-            <button onclick="showSection('home'); toggleMobileMenu()"
-                class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300">Startseite</button>
-
-            <button onclick="showSection('partei'); toggleMobileMenu()"
-                class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300">Unsere Partei</button>
-
-            <button onclick="showSection('elke'); toggleMobileMenu()"
-                class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300">Über Elke</button>
-
-            <button onclick="showSection('impressum'); toggleMobileMenu()"
-                class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300">Impressum</button>
-
-            <button onclick="showSection('datenschutz'); toggleMobileMenu()"
-                class="hover:text-[#2f8b84] py-4 mb-2">Datenschutz</button>
-
-        </div>
-
-    </header>
-
-    <!-- Startseite -->
-    <section id="home" class="flex-grow">
-
-        <div class="text-center py-12 bg-gradient-to-b from-white to-gray-100">
-            <h1 class="text-3xl md:text-5xl font-extrabold text-[#2f8b84]">Nominierungsveranstaltung</h1>
-            <p class="text-lg md:text-xl mt-3 text-gray-700">Bericht von Elke Weippert</p>
-        </div>
-
-        <main class="max-w-3xl mx-auto px-6 py-12">
-
-            <div
-                class="bg-white shadow-lg rounded-2xl p-10 border border-gray-200 text-gray-800 leading-relaxed text-xl">
-
+        function loadNominierungHTML() {
+            return `
                 <img src="img/elke_aloisFischer.jpg" alt="Nominierungsveranstaltung"
                     class="w-full max-w-full h-auto rounded-xl shadow mb-3">
 
@@ -175,10 +119,248 @@
                     Wir haben noch ein paar Listenplätze für die Gemeinderatswahl frei. Sie passen in unser Team? Dann
                     melden Sie sich gerne bei uns!
                 </p>
+            `;
+        }
 
+        function loadOGVWeihnachtsEinsatzHTML() {
+            return `
+        <h2 class="text-3xl font-bold text-[#2f8b84] mb-6">
+            Vorweihnachtlicher Arbeitseinsatz des Obst- und Gartenbauvereins
+        </h2>
+
+        <img src="img/OGVWeihnachtsEinsatz.jpg"
+             class="w-full max-w-full h-auto rounded-xl shadow mb-6">
+
+        <p class="mb-6">
+            Es fand ein gemeinsamer Arbeitseinsatz mit unserer Bürgermeisterkandidatin 
+            <strong>Elke</strong> statt. Gemeinsam mit der erweiterten Vorstandschaft und
+            Michaela Sendelbach wurde der Marktplatz für die Adventszeit vorbereitet.
+        </p>
+
+        <p class="mb-6">
+            Bei herrlichem Wetter wurden die Weihnachtsdekorationen aufgebaut, die vor
+            einigen Jahren von unseren Mittelschülern gestaltet wurden. Zusätzlich wurden
+            alte Geranien entfernt und die Beete bereits mit Osterglockenzwiebeln versehen.
+            Die Pflanzringe wurden für die kommenden Wintertage abgedeckt.
+        </p>
+
+        <p class="mb-6">
+            Dank einer großzügigen Pflanzenspende konnten mehrere Pflanzkübel mit Erika
+            bepflanzt werden.
+        </p>
+
+        <p class="mb-6 font-semibold">Ein herzliches Dankeschön an unsere Unterstützer:</p>
+
+        <ul class="list-disc ml-6 mb-6">
+            <li>Gärtnerei Reitzenstein – Erikapflanzen</li>
+            <li>Werner Lachmann – Krapfen</li>
+            <li>Christopher Liepold – Getränke</li>
+        </ul>
+
+        <p class="mb-6">
+            Da unsere Weihnachtsdeko in die Jahre gekommen ist, suchen wir handwerklich
+            begabte Mitbürgerinnen und Mitbürger, die uns beim Aufarbeiten der Dekoartikel
+            unterstützen möchten. Kontakt: <strong>vorstand@ogv-rimpar.de</strong>
+        </p>
+    `;
+        }
+
+
+
+        /* ---------------------------------------
+           LISTE ALLER BERICHTE
+           (hier neue Berichte eintragen)
+        ---------------------------------------- */
+        const reports = [
+            {
+                title: "Nominierungsveranstaltung – Bericht von Elke",
+                image: "img/elke_aloisFischer.jpg",
+                load: loadNominierungHTML,
+                date: "2025-11-17"
+            },
+
+            {
+                title: "Vorweihnachtlicher Arbeitseinsatz des OGV – Bericht von Elke",
+                image: "img/OGVWeihnachtsEinsatz.jpg",
+                load: loadOGVWeihnachtsEinsatzHTML,
+                date: "2025-11-19"
+            }
+        ];
+
+        /* -----------------------------
+           NEUSTER BERICHT FÜR STARTSEITE
+        ----------------------------- */
+        function loadLatestReport() {
+            reports.sort((a, b) => new Date(b.date) - new Date(a.date));
+            document.getElementById("reportContent").innerHTML = reports[0].load();
+        }
+
+        /* -----------------------------
+           CARDS (BERICHTE-ÜBERSICHT)
+        ----------------------------- */
+        function loadReportCards() {
+            let html = "";
+
+            reports.forEach(r => {
+                html += `
+                    <div class="bg-white shadow-lg rounded-xl overflow-hidden cursor-pointer hover:shadow-xl transition"
+                         onclick="openReport(${reports.indexOf(r)})">
+
+                        <img src="${r.image}" class="w-full h-48 object-cover">
+                        
+                        <div class="p-5 text-center">
+                            <h3 class="text-xl font-bold text-[#2f8b84]">${r.title}</h3>
+                        </div>
+
+                    </div>
+                `;
+            });
+
+            document.getElementById("reportsGrid").innerHTML = html;
+        }
+
+        /* -----------------------------
+           BERICHT ÖFFNEN (Cards verschwinden)
+        ----------------------------- */
+        function openReport(index) {
+
+            const report = reports[index];
+
+            document.getElementById("berichteView").classList.add("hidden");
+            document.getElementById("singleReportView").classList.remove("hidden");
+
+            document.getElementById("singleReportContent").innerHTML = report.load();
+        }
+
+        /* -----------------------------
+           ZURÜCK ZU CARDS
+        ----------------------------- */
+        function goBackToCards() {
+            document.getElementById("singleReportView").classList.add("hidden");
+            document.getElementById("berichteView").classList.remove("hidden");
+        }
+
+        window.onload = () => {
+            loadLatestReport();
+            loadReportCards();
+        };
+    </script>
+
+</head>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto flex items-center justify-between p-4">
+
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showSection('home')">
+                <img src="img/Logo_FUW_Klein.png" class="w-10 h-10">
+                <span class="text-xl font-semibold text-[#2f8b84]">FUW Rimpar</span>
+            </div>
+
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <button onclick="showSection('home')" class="hover:text-[#2f8b84]">Startseite</button>
+                <button onclick="showSection('berichte')" class="hover:text-[#2f8b84]">Berichte</button>
+                <button onclick="showSection('partei')" class="hover:text-[#2f8b84]">Unsere Partei</button>
+                <button onclick="showSection('elke')" class="hover:text-[#2f8b84]">Über Elke</button>
+                <button onclick="showSection('impressum')" class="hover:text-[#2f8b84]">Impressum</button>
+                <button onclick="showSection('datenschutz')" class="hover:text-[#2f8b84]">Datenschutz</button>
+            </div>
+
+            <button class="md:hidden text-3xl" onclick="toggleMobileMenu()">☰</button>
+
+        </nav>
+    </header>
+
+    <!-- Mobile Dropdown Menü -->
+    <div id="mobileMenu"
+        class="md:hidden hidden flex-col bg-white shadow text-center py-4 text-lg border-t border-gray-300">
+
+
+        <button onclick="showSection('home'); toggleMobileMenu()"
+            class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300" style="margin: 0.6rem;">Startseite</button>
+
+        <button onclick="showSection('berichte'); toggleMobileMenu()"
+            class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300" style="margin: 0.6rem;">Berichte</button>
+
+        <button onclick="showSection('partei'); toggleMobileMenu()"
+            class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300" style="margin: 0.6rem;">Unsere
+            Partei</button>
+
+        <button onclick="showSection('elke'); toggleMobileMenu()"
+            class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300" style="margin: 0.6rem;">Über Elke</button>
+
+        <button onclick="showSection('impressum'); toggleMobileMenu()"
+            class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300" style="margin: 0.6rem;">Impressum</button>
+
+        <button onclick="showSection('datenschutz'); toggleMobileMenu()"
+            class="hover:text-[#2f8b84] py-4 mb-4 border-b border-gray-300" style="margin: 0.6rem;">Datenschutz</button>
+
+    </div>
+
+
+
+
+
+    <!-- STARTSEITE (aktueller Bericht) -->
+    <section id="home" class="flex-grow">
+
+        <div class="text-center py-12 bg-gradient-to-b from-white to-gray-100">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-[#2f8b84]">Aktueller Bericht</h1>
+            <p class="text-lg md:text-xl mt-3 text-gray-700">Neueste Neuigkeiten der FUW Rimpar</p>
+        </div>
+
+        <main class="max-w-3xl mx-auto px-6 py-12">
+            <div id="reportContent"
+                class="bg-white shadow-lg rounded-2xl p-10 border border-gray-200 text-gray-800 leading-relaxed text-xl">
             </div>
         </main>
+
     </section>
+
+
+
+
+    <!-- BERICHTE -->
+    <section id="berichte" class="hidden flex-grow">
+
+        <!-- Übersicht -->
+        <div id="berichteView">
+
+            <div class="text-center py-12 bg-gradient-to-b from-white to-gray-100">
+                <h2 class="text-4xl font-bold text-[#2f8b84]">Alle Berichte</h2>
+                <p class="text-lg text-gray-700 mt-2">Archiv aller Beiträge</p>
+            </div>
+
+            <main class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 pb-12" id="reportsGrid"></main>
+        </div>
+
+
+        <!-- Einzelner Bericht -->
+        <div id="singleReportView" class="hidden mb-12">
+
+            <div class="max-w-3xl mx-auto px-6 mt-8">
+
+                <!-- Zurück-Button -->
+                <button onclick="goBackToCards()"
+                    class="mb-6 bg-[#2f8b84] text-white px-4 py-2 rounded-xl hover:bg-[#25706a]">
+                    ← Zurück zu allen Berichten
+                </button>
+
+                <!-- Bericht -->
+                <div id="singleReportContent"
+                    class="bg-white shadow-lg rounded-2xl p-8 border border-gray-200 text-gray-800 leading-relaxed text-xl">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- REST deiner Original-Seite (Partei, Elke, Impressum, Datenschutz) bleibt alles unverändert -->
 
     <!-- Unsere Partei -->
     <section id="partei" class="hidden flex-grow">
@@ -247,11 +429,12 @@
 
     </section>
 
-    <!-- Impressum -->
+
     <section id="impressum" class="hidden flex-grow">
         <div class="text-center py-12">
             <h2 class="text-3xl font-bold text-[#2f8b84]">Impressum</h2>
         </div>
+
         <main class="max-w-4xl mx-auto px-4 py-10 text-gray-700">
             <p><strong>FUW Rimpar – Fortschritt und Wandel</strong></p>
             <p>Von-Stauffenberg-Straße 53a, 97222 Rimpar</p>
@@ -260,11 +443,12 @@
         </main>
     </section>
 
-    <!-- Datenschutz -->
+
     <section id="datenschutz" class="hidden flex-grow">
         <div class="text-center py-12">
             <h2 class="text-3xl font-bold text-[#2f8b84]">Datenschutzerklärung</h2>
         </div>
+
         <main class="max-w-4xl mx-auto px-4 py-10 text-gray-700 space-y-4">
             <p><strong>1. Verantwortlich:</strong> FUW Rimpar – Fortschritt und Wandel</p>
             <p><strong>2. Daten:</strong> Es werden nur technisch notwendige Daten gespeichert.</p>
@@ -272,7 +456,7 @@
         </main>
     </section>
 
-    <!-- Footer -->
+
     <footer class="bg-[#2f8b84] text-white text-sm mt-10">
         <div class="max-w-6xl mx-auto px-4 py-6">
             <p class="font-semibold">FUW Rimpar – Fortschritt und Wandel</p>
